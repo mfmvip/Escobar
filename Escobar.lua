@@ -1595,6 +1595,7 @@ end
 if msg.date_ and msg.date_ < tonumber(os.time() - 30) then
 print("*( OLD MESSAGE )*")
 return false
+end
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
 Devmfm:set(mustafa..'Save:UserName'..msg.sender_user_id_,data.username_)
