@@ -6878,7 +6878,7 @@ Dev_mfm(msg.chat_id_, msg.id_, 1, '✘ ∫ عدد المشتركين ⏎ ❨ '..
 if text and text == "المجموعات" and ChCheck(msg) or text and text == "⏎ المجموعات ✘" then
 local gps = Devmfm:scard(DevProx.."mfm:Groups")
 Dev_mfm(msg.chat_id_, msg.id_, 1, '✘ ∫ عدد المجموعات ⏎ ❨ '..gps..' ❩', 1, 'md')
-endend
+
 end
 end
 --     Source Escobar     --
