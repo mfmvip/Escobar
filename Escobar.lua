@@ -1660,7 +1660,7 @@ end;end,nil)
 --     Source Escobar     --
 local ReFalse = tostring(msg.chat_id_)
 if not Devmfm:sismember(mustafa.."mfm:Groups",msg.chat_id_) and not ReFalse:match("^(%d+)") and not SudoBot(msg) then
-print("Return False : The Bot Is Not Enabled In The Group")return false
+print("Return False : The Bot Is Not Enabled In The Group")
 return false
 end
 --     Source Escobar     --
